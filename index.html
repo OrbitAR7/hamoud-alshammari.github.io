@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Hamoud Alshammari - Aerospace Engineer specializing in Orbit Mechanics, Geodesy, and Remote Sensing. PhD portfolio." />
+  <title>Hamoud Alshammari – PhD Portfolio</title>
+  <style>
+    :root {
+      --primary-color: #bf5700;
+      --secondary-color: #333f48;
+      --text-dark: #1a1a1a;
+      --text-light: #666;
+      --bg-light: #f8f9fa;
+      --accent: #005f86;
+      --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+      background: #fff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header & Navigation */
+    header {
+      background: #fff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .nav-brand {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-dark);
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-color);
+    }
+
+    .mobile-nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .mobile-nav-toggle span {
+      width: 25px;
+      height: 3px;
+      background: var(--secondary-color);
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--secondary-color), var(--accent));
+      color: #fff;
+      padding: 6rem 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      margin-bottom: 0.75rem;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    .hero .tagline {
+      font-size: 1.2rem;
+      opacity: 0.95;
+      margin-bottom: 1.75rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: all 0.25s;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: var(--primary-color);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      filter: brightness(0.95);
+    }
+
+    .btn-outline {
+      border: 2px solid #fff;
+      color: #fff;
+    }
+
+    .btn-outline:hover {
+      background: #fff;
+      color: var(--secondary-color);
+    }
+
+    /* Sections */
+    section {
+      padding: 4rem 0;
+    }
+
+    section:nth-of-type(even) {
+      background: var(--bg-light);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: var(--secondary-color);
+      text-align: center;
+    }
+
+    /* About */
+    .about-content {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 1.85;
+    }
+
+    .about-content p {
+      margin-bottom: 1.2rem;
+      color: var(--text-light);
+    }
+
+    .current-role {
+      background: #fff;
+      padding: 1.25rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: var(--card-shadow);
+      margin: 1.25rem auto 0;
+      /* center the block */
+      max-width: 720px;
+      /* adjust width to taste (680–900px) */
+      text-align: center;
+      /* center the text too */
+    }
+
+    .current-role h3 {
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
+
+    /* keep the courses in columns like before */
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.5rem;
+      align-items: start;
+      /* tidy top alignment */
+    }
+
+    /* make each card self-contained (won’t stretch weirdly) */
+    .course-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    /* small figure block before the mini-project */
+    .glance-block {
+      background: var(--bg-light);
+      padding: 0.75rem 0.9rem;
+      border-radius: 8px;
+      margin: 0.75rem 0 0.9rem;
+    }
+
+    .glance-block h4 {
+      color: var(--accent);
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* tiny, fixed-size thumbs */
+    .course-thumbs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .course-thumbs img {
+      width: 84px;
+      height: 84px;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: var(--card-shadow);
+      flex: 0 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .course-thumbs img {
+        width: 92px;
+        height: 92px;
+      }
+    }
+
+    /* Grid cards */
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.25rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.25rem;
+    }
+
+    .course-card,
+    .project-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.2rem 1.25rem;
+      box-shadow: var(--card-shadow);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .course-card:hover,
+    .project-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    .course-card h3,
+    .project-content h3 {
+      color: var(--secondary-color);
+      margin-bottom: 0.4rem;
+      font-size: 1.2rem;
+    }
+
+    .course-focus {
+      color: var(--text-light);
+      margin-bottom: 0.8rem;
+      font-size: 0.98rem;
+    }
+
+    /* tiny, fixed-size thumbs inside course cards */
+    .course-thumbs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .course-thumbs img {
+      width: 84px;
+      /* fixed small square */
+      height: 84px;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: var(--card-shadow);
+      flex: 0 0 auto;
+      /* prevent stretching */
+    }
+
+    @media (min-width: 768px) {
+      .course-thumbs img {
+        width: 92px;
+        height: 92px;
+      }
+    }
+
+    .mini-project {
+      background: var(--bg-light);
+      padding: 0.75rem 0.9rem;
+      border-radius: 8px;
+      margin: 0.75rem 0;
+    }
+
+    .mini-project h4 {
+      color: var(--accent);
+      font-size: 0.95rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .mini-project p {
+      font-size: 0.92rem;
+      color: var(--text-dark);
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.6rem;
+    }
+
+    .skill-tag {
+      background: var(--accent);
+      color: #fff;
+      padding: 0.22rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+    }
+
+    /* Project card internals */
+    .project-image {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, var(--accent), var(--primary-color));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.1rem;
+      border-radius: 8px;
+    }
+
+    .project-content {
+      padding-top: 1rem;
+    }
+
+    .project-content p {
+      color: var(--text-light);
+      margin-bottom: 0.7rem;
+    }
+
+    .project-methods h4 {
+      color: var(--accent);
+      font-size: 0.9rem;
+      margin: 0.4rem 0;
+    }
+
+    .outcome {
+      background: var(--bg-light);
+      padding: 0.7rem;
+      border-radius: 8px;
+      margin-top: 0.65rem;
+    }
+
+    .outcome strong {
+      color: var(--primary-color);
+    }
+
+    /* Contact & footer */
+    .contact-content {
+      text-align: center;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin: 1.5rem 0;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-dark);
+      text-decoration: none;
+    }
+
+    .contact-item:hover {
+      color: var(--primary-color);
+    }
+
+    footer {
+      background: var(--secondary-color);
+      color: #fff;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    /* Lightbox overlay (added) */
+    #lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      display: none;
+      /* hidden by default */
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    }
+
+    #lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 28px;
+      font-size: 40px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .mobile-nav-toggle {
+        display: flex;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        padding: 1rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hero h1 {
+        font-size: 2.1rem;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .courses-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="container">
+      <div class="nav-brand">Hamoud Alshammari</div>
+      <button class="mobile-nav-toggle" onclick="toggleMobileNav()">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#undergrad">Foundations</a></li>
+        <li><a href="#outside">Outside</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>Hamoud Alshammari</h1>
+      <p class="tagline">Aerospace Engineer — Orbit Mechanics, Geodesy & Remote Sensing — PhD Portfolio</p>
+      <div class="cta-buttons">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <p>
+          I completed a coursework-based M.S. in Aerospace Engineering at The University of Texas at Austin, where
+          I worked closely with faculty in orbit mechanics, geodesy, and remote sensing. My graduate training fostered
+          a strong foundation in estimation theory, reference frames, and spacecraft dynamics, and it shaped my
+          commitment to advancing precise and reliable space operations through research in orbit determination,
+          dynamical systems, and control.
+        </p>
+        <p>
+          My research interests span the intersection of classical orbital dynamics and modern sensing technologies:
+          orbit determination, spacecraft state estimation (MEKF), radar and LiDAR systems, geodetic reference frames,
+          and (select) machine learning applications for geosciences. I’m pursuing a PhD to connect rigorous orbital
+          dynamics with sensing for real-world space applications.
+        </p>
+        <div class="current-role" aria-label="Recent role at UT Austin CSR">
+          <h3>Recent Role</h3>
+          <p>
+            <strong>Research Engineering/Scientist Professional, Center for Space Research/UT- Austin</strong>
+            <br>
+            Contributed to interagency efforts on <em>lunar reference-frame alignment</em> and early cislunar navigation
+            topics.
+            <br>
+            Applied geodetic principles to evaluate and synthesize multi-source spatial datasets and authored technical
+            notes.
+            (Select project details intentionally limited for confidentiality.)
+          </p>
+          <p>
+            <strong>Graduate Research Assistant, Center for Space Research/UT- Austin</strong>
+            <br>
+            Supported research in <em>lunar geodesy</em> and reference-system development; contributed to internal
+            documentation and reports.
+          </p>
+        </div>
+        <div class="current-role">
+          <h3>Current Position</h3>
+          <p>
+            <strong>Aerospace Technology Engineer at Neo Space Group</strong><br />
+            At this early-stage startup, my role centers on Research and Development (R&D) as well as technical
+            due diligence. I work directly with the CTO to evaluate companies, validate their claims using available
+            tools, and when necessary, develop my own methods. My work spans satellite communications (SatCom),
+            Positioning, Navigation and Timing (PNT), Earth Observation (EO), and NB-IoT applications.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES (compact) -->
+  <section id="courses">
+    <div class="container">
+      <h2>Graduate Courses</h2>
+
+      <div class="courses-grid">
+        <!-- Celestial Mechanics I -->
+        <div class="course-card">
+          <h3>Celestial Mechanics I</h3>
+          <p class="course-focus">N-body dynamics, perturbation theory, STMs & variational equations.</p>
+
+          <!-- Figures first -->
+          <div class="glance-block">
+            <h4>Figure Highlights</h4>
+            <div class="course-thumbs">
+              <img class="clickable" loading="lazy" src="assets/CM1_lagrangePoints.jpg"
+                data-full="assets/CM1_lagrangePoints.jpg" alt="Lagrange points & local motion">
+              <img class="clickable" loading="lazy" src="assets/STM.png" data-full="assets/STM.png"
+                alt="State transition matrix comparison">
+              <img class="clickable" loading="lazy" src="assets/ZeroPlots6.png" data-full="assets/ZeroPlots6.png"
+                alt="Zero-Velocity Curves">
+            </div>
+          </div>
+
+          <!-- Mini-project -->
+          <div class="mini-project">
+            <h4>Mini-Project</h4>
+            <p>
+              Extended classical STM/variational analysis to include third-body perturbations;
+              applied Lagrange’s planetary equations across regimes.
+            </p>
+          </div>
+
+          <!-- Skills stay INSIDE the course-card -->
+          <div class="skills-list">
+            <span class="skill-tag">STM</span>
+            <span class="skill-tag">Perturbation Theory</span>
+            <span class="skill-tag">N-Body</span>
+            <span class="skill-tag">Lagrange</span>
+          </div>
+        </div>
+
+        <!-- LEO for EO -->
+        <div class="course-card">
+          <h3>LEO Satellites for Earth Observation</h3>
+          <p class="course-focus">Orbital design for remote sensing missions; repeat, sun-sync & frozen orbits.</p>
+
+          <!-- Figures first -->
+          <div class="glance-block">
+            <h4>Figure Highlights</h4>
+            <div class="course-thumbs">
+              <img class="clickable" loading="lazy" src="assets/LEO1.jpg" data-full="assets/LEO1.jpg"
+                alt="Variation of Sun-Cycle">
+              <img class="clickable" loading="lazy" src="assets/LEO2.jpg" data-full="assets/LEO2.jpg"
+                alt="Variation of Beta Angle">
+              <img class="clickable" loading="lazy" src="assets/LEO3.jpg" data-full="assets/LEO3.jpg"
+                alt="Rate of Precession">
+            </div>
+          </div>
+
+          <!-- Mini-project -->
+          <div class="mini-project">
+            <h4>Mini-Project</h4>
+            <p>Replicated TerraSAR-X orbit control around an 11-day sun-sync repeat cycle; ΔV planning under J2/drag. <a
+                href="#proj-terrasarx">See project →</a></p>
+          </div>
+          <div class="skills-list">
+            <span class="skill-tag">Orbit Control</span>
+            <span class="skill-tag">Repeat Orbits</span>
+            <span class="skill-tag">Sun-Sync</span>
+            <span class="skill-tag">Coverage</span>
+          </div>
+        </div>
+
+        <!-- Methods of Orbit Determination -->
+        <div class="course-card">
+          <h3>Methods of Orbit Determination</h3>
+          <p class="course-focus">Statistical estimation for trajectory determination (EKF/UKF).</p>
+          <!-- Figures first -->
+          <div class="glance-block">
+            <h4>Figure Highlights</h4>
+            <div class="course-thumbs">
+              <img class="clickable" loading="lazy" src="assets/UKF3.jpg" data-full="assets/UKF3.jpg"
+                alt="UKF RIC Error">
+              <img class="clickable" loading="lazy" src="assets/EKF_1.jpg" data-full="assets/EKF_1.jpg"
+                alt="EKF Example">
+              <img class="clickable" loading="lazy" src="assets/com_time.jpg" data-full="assets/com_time.jpg"
+                alt="Computation Time">
+            </div>
+          </div>
+          <!-- Mini-project -->
+          <div class="mini-project">
+            <h4>Mini-Project</h4>
+            <p>JahSat-1 OD from range/range rate at 3 stations; residuals & RIC error evaluation across scenarios. <a
+                href="#proj-jahsat">See project →</a></p>
+          </div>
+          <div class="skills-list">
+            <span class="skill-tag">EKF / UKF</span>
+            <span class="skill-tag">Residuals</span>
+            <span class="skill-tag">RIC Errors</span>
+            <span class="skill-tag">Covariance</span>
+          </div>
+        </div>
+
+        <!-- Satellite Control Systems -->
+        <div class="course-card">
+          <h3>Satellite Control Systems</h3>
+          <p class="course-focus">Attitude dynamics, estimation, and control for spacecraft subsystems.</p>
+
+          <!-- Figures first -->
+          <div class="glance-block">
+            <h4>Figure Highlights</h4>
+            <div class="course-thumbs">
+              <img class="clickable" loading="lazy" src="assets/sat_sys_1.jpg" data-full="assets/sat_sys_1.jpg"
+                alt="Angular Velocities">
+              <img class="clickable" loading="lazy" src="assets/Angle_mom.jpg" data-full="assets/Angle_mom.jpg"
+                alt="Spacecraft Angular Velocity Components">
+              <img class="clickable" loading="lazy" src="assets/wheels_4.jpg" data-full="assets/wheels_4.jpg"
+                alt="Reaction Wheel Angular Velocities">
+            </div>
+          </div>
+
+          <div class="mini-project">
+            <h4>Mini-Project</h4>
+            <p>Closed-loop ADCS with MEKF, Earth-pointing PD, sensor/actuator error models; validated via Monte Carlo.
+              <a href="#proj-mekf">See project →</a>
+            </p>
+          </div>
+          <div class="skills-list">
+            <span class="skill-tag">MEKF</span>
+            <span class="skill-tag">ADCS</span>
+            <span class="skill-tag">PD Control</span>
+            <span class="skill-tag">Monte Carlo</span>
+          </div>
+        </div>
+
+        <!-- Radar Systems for EO -->
+        <div class="course-card">
+          <h3>Radar Systems for Earth Observation</h3>
+          <p class="course-focus">SAR principles, time-domain/back-projection focusing, image quality.</p>
+
+          <!-- Figures first -->
+          <div class="glance-block">
+            <h4>Figure Highlights</h4>
+            <div class="course-thumbs">
+              <img class="clickable" loading="lazy" src="assets/F_UF.png" data-full="assets/F_UF.png"
+                alt="Unfocused vs focused">
+              <img class="clickable" loading="lazy" src="assets/ave_vs_ref.jpg" data-full="assets/ave_vs_ref.jpg"
+                alt="Comparison between Average Spectrum & Reference Chirp Spectrum">
+              <img class="clickable" loading="lazy" src="assets/Multi-look_Image.png"
+                data-full="assets/Multi-look_Image.png" alt="Multi-look Image">
+            </div>
+          </div>
+
+          <div class="mini-project">
+            <h4>Mini-Project</h4>
+            <p>Focused SAR image reconstruction via back-projection; multi-look sharpening over unfocused baseline. <a
+                href="#proj-sar">See project →</a></p>
+          </div>
+          <div class="skills-list">
+            <span class="skill-tag">SAR</span>
+            <span class="skill-tag">Back-Projection</span>
+            <span class="skill-tag">Signal Proc</span>
+            <span class="skill-tag">Imaging</span>
+          </div>
+        </div>
+
+        <!-- 3D Remote Sensing: LiDAR -->
+        <div class="course-card">
+          <h3>3D Remote Sensing: LiDAR Analysis</h3>
+          <p class="course-focus">Point-cloud processing; terrain/vegetation structure products.</p>
+
+          <!-- Figures first -->
+          <div class="glance-block">
+            <h4>Figure Highlights</h4>
+            <div class="course-thumbs">
+              <img class="clickable" loading="lazy" decoding="async" src="assets/lowdiff.png"
+                data-full="assets/lowdiff.png" alt="Canopy quicklook">
+              <img class="clickable" loading="lazy" decoding="async" src="assets/austincaptial.png"
+                data-full="assets/austincaptial.png" alt="Austin Captail">
+              <img class="clickable" loading="lazy" decoding="async" src="assets/Angle_Map.png"
+                data-full="assets/Angle_Map.png" alt="Slope">
+            </div>
+          </div>
+
+          <!-- Mini-Project -->
+          <div class="mini-project">
+            <h4>Mini-Project</h4>
+            <p>
+              Tree recognition & canopy metrics pipeline (DTM/DSM/CHM, crown segmentation)
+              to prototype a KSA workflow.
+            </p>
+          </div>
+
+          <div class="skills-list">
+            <span class="skill-tag">LiDAR</span>
+            <span class="skill-tag">DTM/DSM/CHM</span>
+            <span class="skill-tag">Segmentation</span>
+            <span class="skill-tag">CloudCompare</span>
+          </div>
+        </div>
+
+        <!-- Satellite Geodesy -->
+        <div class="course-card">
+          <h3>Satellite Geodesy</h3>
+          <p class="course-focus">Gravity field modeling, functionals, and time-variable mass signals.</p>
+
+          <!-- Figures first -->
+          <div class="glance-block">
+            <h4>Figure Highlights</h4>
+            <div class="course-thumbs">
+              <img class="clickable" loading="lazy" decoding="async" src="assets/Geodesy.jpg"
+                data-full="assets/Geodesy.jpg" alt="80°E plots">
+              <img class="clickable" loading="lazy" decoding="async" src="assets/GL_H.png" data-full="assets/GL_H.png"
+                alt="Spherical Harmonic Representation">
+              <img class="clickable" loading="lazy" decoding="async" src="assets/SH_60.png" data-full="assets/SH_60.png"
+                alt="Spherical Harmonic Representation">
+            </div>
+          </div>
+
+          <div class="mini-project">
+            <h4>Mini-Project</h4>
+            <p>Degree-variance spectra for potential, geoid, gravity anomaly & ∂²g/∂r²; meridian profiles at 80°E.</p>
+          </div>
+          <div class="skills-list">
+            <span class="skill-tag">Spherical harmonics</span>
+            <span class="skill-tag">Degree Variances</span>
+            <span class="skill-tag">GRACE/GRACE-FO</span>
+            <span class="skill-tag">Geoid</span>
+          </div>
+        </div>
+
+        <!-- ML for Geosciences (optional) -->
+        <div class="course-card">
+          <h3>ML Applications in the Geosciences</h3>
+          <p class="course-focus">Object detection pipelines for EO datasets.</p>
+
+          <!-- Figures first -->
+          <div class="glance-block">
+            <h4>Figure Highlights</h4>
+            <div class="course-thumbs">
+              <img class="clickable" loading="lazy" decoding="async" src="assets/ML_geo.png"
+                data-full="assets/ML_geo.png" alt="Predicted vs True">
+              <img class="clickable" loading="lazy" decoding="async" src="assets/cost.png" data-full="assets/cost.png"
+                alt="Cost Matrix">
+              <img class="clickable" loading="lazy" decoding="async" src="assets/validation.png"
+                data-full="assets/validation.png" alt="validation accuracy">
+            </div>
+          </div>
+
+          <div class="mini-project">
+            <h4>Mini-Project</h4>
+            <p>Benchmarked detection architectures for tree-crown identification; integrated DeepForest as baseline. <a
+                href="#proj-ml">See project →</a></p>
+          </div>
+          <div class="skills-list">
+            <span class="skill-tag">Detection</span>
+            <span class="skill-tag">CNN</span>
+            <span class="skill-tag">PyTorch</span>
+          </div>
+        </div>
+
+        <!-- EXTRA COURSES -->
+        <div class="course-card">
+          <h3>Stochastic Systems, Estimation & Control</h3>
+          <p class="course-focus">Random processes, estimation methods, and stochastic control for dynamic systems.</p>
+          <div class="mini-project">
+            <h4>Mini-Project</h4>
+            <p>Compared EKF, UKF, and the Statistically Linearized Filter on nonlinear systems. Assessed filter
+              consistency,
+              estimation accuracy, and observability under varying measurement schedules.</p>
+          </div>
+          <div class="skills-list">
+            <span class="skill-tag">Statistically Linearized Filter</span>
+            <span class="skill-tag">Kalman Family</span>
+            <span class="skill-tag">Stochastic Control</span>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <h3>Optimal Control Theory</h3>
+          <p class="course-focus">Pontryagin’s Maximum Principle, dynamic programming, and optimal trajectory design.
+          </p>
+          <div class="mini-project">
+            <h4>Mini-Project</h4>
+            <p>Implemented a low-thrust transfer using indirect shooting methods and validated results against direct
+              transcription. Explored sensitivity to cost function weighting and convergence behavior.</p>
+          </div>
+          <div class="skills-list">
+            <span class="skill-tag">Optimal Control</span>
+            <span class="skill-tag">Indirect/Direct Methods</span>
+            <span class="skill-tag">Pontryagin/HJB</span>
+            <span class="skill-tag">Trajectory Optimization</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Audited list -->
+      <div style="max-width:900px; margin: 1.2rem auto 0;">
+        <p style="color: var(--text-light); font-size: 0.95rem; text-align:center;">
+          <strong>Audited:</strong> Orbital Debris · Network Control Theory · Statistical Estimation Theory
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS (expanded with images) -->
+  <section id="projects">
+    <div class="container">
+      <h2>Selected Research Projects (Detailed)</h2>
+
+      <div class="projects-grid">
+        <!-- TerraSAR-X Orbit Control -->
+        <div class="project-card" id="proj-terrasarx">
+          <div class="project-image">TerraSAR-X Control</div>
+          <div class="project-content">
+            <h3>Replicating TerraSAR-X Orbit Control</h3>
+            <p>
+              Recreated TerraSAR-X’s 11-day sun-synchronous repeat orbit and control strategy. Built truth/reference
+              orbits with J2 & drag,
+              designed ΔV maneuvers to remain within a 250 m tolerance tube, and explored maneuver cadence vs. error
+              growth and propellant.
+            </p>
+            <div class="project-methods">
+              <h4>Methods & Tools</h4>
+              <div class="skills-list">
+                <span class="skill-tag">Orbit Propagation</span>
+                <span class="skill-tag">Sun-Sync/Repeat</span>
+                <span class="skill-tag">Control Budget</span>
+                <span class="skill-tag">MATLAB/Simulink</span>
+              </div>
+            </div>
+            <div class="outcome">
+              <strong>Outcome:</strong> Demonstrated control feasibility under perturbations; outlined extensions for
+              SRP and higher-fidelity drag.
+            </div>
+            <div
+              style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 10px; margin-top: 12px;">
+              <img class="clickable" alt="Normal and Radial Error plot" src="assets/normal_radial_error.png"
+                style="width:100%; height:180px; object-fit:cover; background:#e9eef3;">
+              <img class="clickable" alt="Tolerance tube plot" src="assets/terrasarx_tube.png"
+                style="width:100%; height:180px; object-fit:cover; background:#e9eef3;">
+              <img class="clickable" alt="Tolerance tube plot" src="assets/Sat.png"
+                style="width:100%; height:180px; object-fit:cover; background:#e9eef3;">
+            </div>
+          </div>
+        </div>
+
+        <!-- MEKF ADCS -->
+        <div class="project-card" id="proj-mekf">
+          <div class="project-image">MEKF Simulation</div>
+          <div class="project-content">
+            <h3>Closed-Loop ADCS with MEKF</h3>
+            <p>
+              Developed a comprehensive ADCS simulation: rigid-body attitude dynamics with environmental torques,
+              Earth-pointing PD controller,
+              reaction-control actuators with error models, multi-sensor attitude suite, and a six-state MEKF for
+              attitude & gyro-bias estimation.
+              Robustness evaluated via 100-run Monte Carlo.
+            </p>
+            <div class="project-methods">
+              <h4>Methods & Tools</h4>
+              <div class="skills-list">
+                <span class="skill-tag">MEKF</span>
+                <span class="skill-tag">PD Control</span>
+                <span class="skill-tag">Sensor Fusion</span>
+                <span class="skill-tag">Monte Carlo</span>
+              </div>
+            </div>
+            <div class="outcome">
+              <strong>Outcome:</strong> Bias convergence and pointing accuracy achieved across disturbance cases;
+              sensitivity to sensor noise quantified.
+            </div>
+            <div
+              style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 10px; margin-top: 12px;">
+              <img class="clickable" alt="Attitude rate error vs Attitude error" src="assets/mekf_pointing_error.png"
+                style="width:100%; height:180px; object-fit:cover; background:#e9eef3;">
+              <img class="clickable" alt="Bias" src="assets/mekf_bias.png"
+                style="width:100%; height:180px; object-fit:cover; background:#e9eef3;">
+              <img class="clickable" alt="Angular Momentum" src="assets/mekf_AM.png"
+                style="width:100%; height:180px; object-fit:cover; background:#e9eef3;">
+            </div>
+          </div>
+        </div>
+
+        <!-- SAR Reconstruction -->
+        <div class="project-card" id="proj-sar">
+          <div class="project-image">SAR Processing</div>
+          <div class="project-content">
+            <h3>SAR Image Reconstruction</h3>
+            <p>
+              Implemented time-domain back-projection focusing from raw complex data; applied range compression, azimuth
+              focusing,
+              and multi-looking to produce high-resolution images with sharper visual quality than unfocused methods.
+            </p>
+            <div class="project-methods">
+              <h4>Methods & Tools</h4>
+              <div class="skills-list">
+                <span class="skill-tag">SAR</span>
+                <span class="skill-tag">Back-Projection</span>
+                <span class="skill-tag">Signal Proc</span>
+                <span class="skill-tag">Imaging</span>
+              </div>
+            </div>
+            <div class="outcome"><strong>Outcome:</strong> Focused imagery of urban scenes with visual resolution
+              improvement over unfocused baseline.</div>
+            <div
+              style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 10px; margin-top: 12px;">
+              <img class="clickable" alt="Back Projection" src="assets/back_pro.png"
+                style="width:100%; height:180px; object-fit:cover; background:#e9eef3;">
+              <img class="clickable" alt="Data" src="assets/Data_2D.jpg"
+                style="width:100%; height:180px; object-fit:cover; background:#e9eef3;">
+              <img class="clickable" alt="Range Compression" src="assets/comepress.png"
+                style="width:100%; height:180px; object-fit:cover; background:#e9eef3;">
+            </div>
+          </div>
+        </div>
+
+        <!-- OD: JahSat-1 -->
+        <div class="project-card" id="proj-jahsat">
+          <div class="project-image">Orbit Determination</div>
+          <div class="project-content">
+            <h3>JahSat-1: EKF/UKF Orbit Determination</h3>
+            <p>
+              Performed OD with range/range rate from three stations (Kwajalein, Diego Garcia, Arecibo). Compared EKF vs UKF
+              with residual analysis,
+              RIC error evaluation, and scenario sweeps (range-only, rrate-only, per-station) over six days; executed
+              7th-day prediction.
+            </p>
+            <div class="project-methods">
+              <h4>Methods & Tools</h4>
+              <div class="skills-list">
+                <span class="skill-tag">EKF/UKF</span>
+                <span class="skill-tag">Residuals</span>
+                <span class="skill-tag">RIC Errors</span>
+                <span class="skill-tag">Bias Estimation</span>
+              </div>
+            </div>
+            <div class="outcome"><strong>Outcome:</strong> Quantified filter performance by measurement mix & geometry;
+              informed optimal tracking strategy.</div>
+            <div
+              style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 10px; margin-top: 12px;">
+              <img class="clickable" alt="Prefit/postfit residuals" src="assets/CaseF6daysCUKF.png"
+                style="width:100%; height:180px; object-fit:cover; background:#e9eef3;">
+              <img class="clickable" alt="UKF RIC error" src="assets/UKF1.jpg"
+                style="width:100%; height:180px; object-fit:cover; background:#e9eef3;">
+              <img class="clickable" alt="UKF RIC error" src="assets/UKF2.jpg"
+                style="width:100%; height:180px; object-fit:cover; background:#e9eef3;">
+            </div>
+          </div>
+        </div>
+
+        <!-- ML Detection (optional) -->
+        <div class="project-card" id="proj-ml">
+          <div class="project-image">EO Detection</div>
+          <div class="project-content">
+            <h3>EO Object Detection: Tree Crowns</h3>
+            <p>Benchmarked Faster R-CNN / RetinaNet / SSD; integrated DeepForest baseline; prepared dataset protocol for
+              fair comparison.</p>
+            <div class="project-methods">
+              <h4>Methods & Tools</h4>
+              <div class="skills-list">
+                <span class="skill-tag">Detection</span>
+                <span class="skill-tag">CNN</span>
+                <span class="skill-tag">PyTorch</span>
+              </div>
+            </div>
+            <div class="outcome"><strong>Outcome:</strong> Standardized pipeline to support future precision/recall
+              benchmarking on EO imagery.</div>
+            <div
+              style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 10px; margin-top: 12px;">
+              <img class="clickable" alt="Detection example" src="assets/detection.png"
+                style="width:100%; height:180px; object-fit:cover; background:#e9eef3;">
+              <img class="clickable" alt="Training" src="assets/Training.png"
+                style="width:100%; height:180px; object-fit:cover; background:#e9eef3;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Hidden anchor for future STM project page -->
+        <div class="project-card" id="proj-stm" style="display:none;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Undergraduate Foundations -->
+  <section id="undergrad">
+    <div class="container">
+      <h2>Undergraduate Foundations</h2>
+      <div class="courses-grid">
+
+        <div class="course-card">
+          <h3>Senior Design Project</h3>
+          <p class="course-focus">Reusable Lunar Lander for NASA Gateway Mission</p>
+
+          <!-- Figures first -->
+          <div class="glance-block">
+            <h4>Figure Highlights</h4>
+            <div class="course-thumbs">
+              <img class="clickable" loading="lazy" decoding="async" src="assets/stress test.png"
+                data-full="assets/stress test.png" alt="Stress Test">
+              <img class="clickable" loading="lazy" decoding="async" src="assets/damping.png"
+                data-full="assets/damping.png" alt="Dampping Coff">
+              <img class="clickable" loading="lazy" decoding="async" src="assets/legs.png" data-full="assets/legs.png"
+                alt="Landing Legs">
+            </div>
+          </div>
+
+          <div class="mini-project">
+            <p>Led shock absorber design using MATLAB optimization; stability analysis for descent/ascent;
+              CAD & technical drawings for vehicle architecture.</p>
+          </div>
+
+          <div class="skills-list">
+            <span class="skill-tag">Systems Engineering</span>
+            <span class="skill-tag">MATLAB</span>
+            <span class="skill-tag">SolidWorks</span>
+            <span class="skill-tag">Stability Analysis</span>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <h3>Mechanical Vibrations</h3>
+          <p class="course-focus">Fatigue Analysis on Solid Rocket Booster</p>
+
+          <!-- Figures first -->
+          <div class="glance-block">
+            <h4>Figure Highlights</h4>
+            <div class="course-thumbs">
+              <img class="clickable" loading="lazy" decoding="async" src="assets/model.png" data-full="assets/model.png"
+                alt="Model">
+              <img class="clickable" loading="lazy" decoding="async" src="assets/FFT.png" data-full="assets/FFT.png"
+                alt="FFT">
+              <img class="clickable" loading="lazy" decoding="async" src="assets/disp.png" data-full="assets/disp.png"
+                alt="Old Displacement">
+            </div>
+          </div>
+
+          <div class="mini-project">
+            <p>Quantified fatigue damage during pad transport via rainflow & Miner’s rule; proposed optimal
+              crawler speed; compared with inspection data.</p>
+          </div>
+
+          <div class="skills-list">
+            <span class="skill-tag">Vibration Analysis</span>
+            <span class="skill-tag">Fatigue Modeling</span>
+            <span class="skill-tag">Modal Analysis</span>
+            <span class="skill-tag">MATLAB</span>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <h3>Experimental Mechanics</h3>
+          <p class="course-focus">Digital Image Correlation Laboratory</p>
+
+          <!-- Figures first -->
+          <div class="glance-block">
+            <h4>Figure Highlights</h4>
+            <div class="course-thumbs">
+              <img class="clickable" loading="lazy" decoding="async" src="assets/X_dis_ana.jpg"
+                data-full="assets/X_dis_ana.jpg" alt="Lab results">
+              <img class="clickable" loading="lazy" decoding="async" src="assets/s_yy_exp.jpg"
+                data-full="assets/s_yy_exp.jpg" alt="Lab results">
+              <img class="clickable" loading="lazy" decoding="async" src="assets/s_yy_ana.jpg"
+                data-full="assets/s_yy_ana.jpg" alt="Lab results">
+            </div>
+          </div>
+
+          <div class="mini-project">
+            <p>Measured strain fields; compared homogeneous vs. inhomogeneous deformation; discussed
+              capabilities/limits of optical methods.</p>
+          </div>
+
+          <div class="skills-list">
+            <span class="skill-tag">DIC/PIV</span>
+            <span class="skill-tag">Strain Measurement</span>
+            <span class="skill-tag">Lab Techniques</span>
+            <span class="skill-tag">Data Analysis</span>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <h3>Advanced Dynamics & Mechanics</h3>
+          <p class="course-focus">Foundation coursework in dynamics and structural mechanics</p>
+
+          <div class="mini-project">
+            <p>Advanced dynamics, mechanics of materials, finite elements, and numerical methods; strong base for
+              aerospace applications.</p>
+          </div>
+
+          <div class="skills-list">
+            <span class="skill-tag">FEA</span>
+            <span class="skill-tag">Continuum Mechanics</span>
+            <span class="skill-tag">Numerical Methods</span>
+            <span class="skill-tag">ANSYS</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Outside Academia -->
+  <section id="outside">
+    <div class="container">
+      <h2>Outside Academia</h2>
+      <div class="about-content" style="max-width: 900px;">
+        <p class="photography-note" style="color: var(--text-light); font-style: italic;">
+          Beyond engineering, I recharge through nature photography and hiking. The patience needed to capture wildlife
+          mirrors the persistence
+          needed in research—waiting for the right conditions, understanding patterns, and appreciating intricate
+          systems.
+        </p>
+        <div style="background: var(--bg-light); padding: 1.5rem; border-radius: 10px; margin-top: 1rem;">
+          <p style="color: var(--text-light); font-style: italic;">
+            Photography portfolio available upon request.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="contact-content">
+        <p style="margin-bottom: 1.2rem; color: var(--text-light);">
+          I'm actively seeking PhD opportunities in aerospace engineering, particularly in areas combining
+          orbital mechanics, remote sensing, and estimation/control. Let's connect.
+        </p>
+        <div class="contact-info">
+          <a href="mailto:alshammarih3351@gmail.com" class="contact-item">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>
+            alshammarih3351@gmail.com
+          </a>
+          <a href="tel:+966547861774" class="contact-item">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+            </svg>
+            +966 547 861 774
+          </a>
+          <a href="https://www.linkedin.com/in/hamoud-alshammari-7415b617a/" class="contact-item">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c-2.761 0-5-2.238-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/OrbitAR7" class="contact-item">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+            GitHub
+          </a>
+        </div>
+        <div style="margin-top: 2rem;">
+          <a href="assets/Hamoud_Alshammari_CV.pdf" class="btn btn-primary">Download Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Hamoud Alshammari. All rights reserved.</p>
+      <p style="margin-top: 0.4rem; opacity: 0.85; font-size: 0.95rem;">
+        Aerospace Engineer | Space Systems Specialist | PhD Aspirant
+      </p>
+    </div>
+  </footer>
+
+  <!-- Lightbox HTML (added) -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+    <span id="lightbox-close" aria-label="Close">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    function toggleMobileNav() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          document.querySelector('.nav-links').classList.remove('active');
+        }
+      });
+    });
+    // Subtle scroll shadow
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      header.style.boxShadow = window.scrollY > 50 ? '0 2px 10px rgba(0,0,0,0.1)' : '0 1px 3px rgba(0,0,0,0.08)';
+    });
+    // Fade-in on scroll
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(ent => {
+        if (ent.isIntersecting) {
+          ent.target.style.opacity = '1';
+          ent.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.course-card, .project-card').forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(16px)';
+      card.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
+      obs.observe(card);
+    });
+
+    // ===== Lightbox logic (added) =====
+    const box = document.getElementById('lightbox');
+    const boxImg = document.getElementById('lightbox-img');
+    const boxClose = document.getElementById('lightbox-close');
+
+    // open on click of any project image with .clickable
+    document.addEventListener('click', (e) => {
+      const img = e.target.closest('img.clickable');
+      if (!img) return;
+      box.style.display = 'flex';
+      boxImg.src = img.dataset.full || img.src;  // support high-res via data-full
+      boxImg.alt = img.alt || '';
+    });
+
+    function closeBox() { box.style.display = 'none'; boxImg.src = ''; }
+    boxClose.addEventListener('click', closeBox);
+    box.addEventListener('click', (e) => { if (e.target === box) closeBox(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeBox(); });
+  </script>
+</body>
+
+</html>
